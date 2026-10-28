@@ -37,9 +37,16 @@ graph TD
         TEAMS[Microsoft Teams - #Alertas-NOC]
     end
 
+    FW -- "SNMP Traps" --> ZBX
+    FW -- "SNMP Polling" --> ZBX
+    SW_CORE -- "SNMP Polling" --> ZBX
+    SW_ACC -- "SNMP Polling" --> ZBX
 
+    ZBX -- "Payload JSON" --> PA
+    PA -- "Adaptive Cards" --> TEAMS
 
-## 🚀 Funcionalidades Implementadas
+```
+##  🚀 Funcionalidades Implementadas
 1. FortiGate Configuration & Security Monitoring
 SNMP Trap Monitoring: Mapeamento do OID de alteração de regras e políticas do FortiGate.
 
@@ -66,13 +73,16 @@ Resolução automática no Teams assim que o status do link/equipamento retorna 
 ⚙️ Configurações no Zabbix & Automações
 Expressão de Trigger para Alteração de Política (FortiGate)
 Ini, TOML
+
 # Trigger para capturar evento de Trap SNMP de mudança de configuração
 {FW-CONSOLACAO-200E-M:snmptrap["fortinet.fnSysEventTrap"].nodata(5m)}=0
 Expressão de Trigger para Status de Interface (Link Down)
 Ini, TOML
+
 # Trigger de disponibilidade da porta
 {$IFCONTROL:"Gi1/0/5"}=1 and last(/SW-ACESSO-117/net.if.status[ifOperStatus.5])=2 and (last(/SW-ACESSO-117/net.if.status[ifOperStatus.5],#1)<>last(/SW-ACESSO-117/net.if.status[ifOperStatus.5],#2))
 Payload JSON para Webhook (MS Teams / Power Automate)
+
 JSON
 {
   "event_id": "{EVENT.ID}",
@@ -100,10 +110,3 @@ MTTD (Mean Time to Detect): Reduzido para < 1 minuto para quedas em APs, impress
 Auditoria de Segurança: Alertas imediatos para a equipe de redes/segurança em caso de qualquer alteração de política no firewall.
 
 Redução de Ruído: Filtragem de alertas no canal de chat, garantindo que o NOC atue apenas em incidentes genuinamente críticos.
-    FW -- "SNMP Traps" --> ZBX
-    FW -- "SNMP Polling" --> ZBX
-    SW_CORE -- "SNMP Polling" --> ZBX
-    SW_ACC -- "SNMP Polling" --> ZBX
-
-    ZBX -- "Payload JSON" --> PA
-    PA -- "Adaptive Cards" --> TEAMS
