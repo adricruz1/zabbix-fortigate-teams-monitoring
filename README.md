@@ -123,4 +123,3 @@ graph TD
 * **MTTD (Mean Time to Detect):** Reduzido para **< 1 minuto** para quedas em APs, impressoras críticas e uplinks.
 * **Auditoria de Segurança:** Alertas imediatos para a equipe de redes/segurança em caso de qualquer alteração de política no firewall.
 * **Redução de Ruído:** Filtragem de alertas no canal de chat, garantindo que o NOC atue apenas em incidentes genuinamente críticos.
-```
