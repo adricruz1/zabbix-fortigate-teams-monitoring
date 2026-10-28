@@ -1,11 +1,3 @@
-### Passo a Passo para Deixar o Texto Perfeito:
-
-1. No teu repositório no GitHub, clica no ícone do **lápis** ✏️ (**Edit this file**) no canto superior direito do `README.md`.
-
-
-2. Apaga **todo** o conteúdo e cola o bloco exato abaixo:
-
-```markdown
 # 🛡️ Zabbix 7.0 & FortiGate: Observabilidade de Redes & Automação de Alertas no Microsoft Teams
 
 ![Zabbix](https://img.shields.io/badge/Zabbix-7.0-RED?style=for-the-badge&logo=zabbix)
