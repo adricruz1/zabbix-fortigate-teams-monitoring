@@ -125,7 +125,3 @@ graph TD
 * **Redução de Ruído:** Filtragem de alertas no canal de chat, garantindo que o NOC atue apenas em incidentes genuinamente críticos.
 
 ```
-
-Após guardar, as seções abaixo do gráfico vão ficar organizadas em cartões, listas e blocos de código formatados com destaque de sintaxe!
-
-```
