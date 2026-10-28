@@ -36,6 +36,9 @@ graph TD
         PA[Power Automate / Webhook]
         TEAMS[Microsoft Teams - #Alertas-NOC]
     end
+
+
+
 ## 🚀 Funcionalidades Implementadas
 1. FortiGate Configuration & Security Monitoring
 SNMP Trap Monitoring: Mapeamento do OID de alteração de regras e políticas do FortiGate.
