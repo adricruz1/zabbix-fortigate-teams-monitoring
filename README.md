@@ -1,16 +1,3 @@
-O diagrama de arquitetura do Mermaid agora renderizou com sucesso e está visível visualmente no topo!
-
-Contudo, observando as últimas imagens, o **texto a seguir ao diagrama ainda ficou desconfigurado**:
-
-* Os títulos das listas (como `1. FortiGate Configuration...`, `2. Switch Port Mapping...`) perderam a formatação de tópicos e ficaram colados no mesmo parágrafo.
-
-
-* Os blocos de código das Triggers e do JSON não ficaram separados em caixas escuras.
-
-
-
-Isso ocorre quando se edita diretamente na interface visual do GitHub ou se colam quebras de linha com caracteres invisíveis.
-
 ---
 
 ### Passo a Passo para Deixar o Texto Perfeito:
