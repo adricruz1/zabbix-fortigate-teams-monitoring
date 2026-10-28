@@ -1,5 +1,3 @@
----
-
 ### Passo a Passo para Deixar o Texto Perfeito:
 
 1. No teu repositório no GitHub, clica no ícone do **lápis** ✏️ (**Edit this file**) no canto superior direito do `README.md`.
